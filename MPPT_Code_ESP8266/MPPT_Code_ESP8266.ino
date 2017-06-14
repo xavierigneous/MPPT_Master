@@ -569,7 +569,7 @@ void led_output(void)
   static char last_lit;
   if(bat_volts > 14.1 )
       light_led(LED_YELLOW);
-  else if(bat_volts > 11.9)
+  else if(bat_volts > 11.9 || bat_volts<14.1)
       light_led(LED_GREEN);
   else
       light_led(LED_RED);
